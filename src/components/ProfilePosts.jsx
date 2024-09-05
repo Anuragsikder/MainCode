@@ -30,4 +30,4 @@ const ProfilePosts = () => {
     }
 
 
-export default ProfilePosts;
+export default ProfilePosts
