@@ -8,7 +8,7 @@ import Profile from "./pages/Profile"
 const App = () => {
   return (
     <div>
-      
+
       <Routes>
       <Route exact path="/" element={<Home/>}/>
       <Route exact path="/login" element={<Login/>}/>
@@ -21,17 +21,16 @@ const App = () => {
 
 
       </Routes>
-     
 
 
 
 
-     
+
+
 
 
     </div>
   )
 }
-
 
 export default App
