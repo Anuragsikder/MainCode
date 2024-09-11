@@ -5,8 +5,6 @@ import Register from "./pages/Register"
 import PostDetails  from "./pages/PostDetails"
 import CreatePost from "./pages/CreatePost"
 import Profile from "./pages/Profile"
-import EditPost from "./pages/EditPost"
-
 const App = () => {
   return (
     <div>
@@ -17,9 +15,7 @@ const App = () => {
       <Route exact path="/register" element={<Register/>}/>
       <Route exact path="/write" element={<CreatePost/>}/>
       <Route exact path="/posts/post/:id" element={<PostDetails/>}/>
-      <Route exact path="/profile/:username" element={<Profile/>}/>
-      <Route exact path="/edit/:id" element={<EditPost/>}/>
-      
+      <Route exact path="/profile/:id" element={<Profile/>}/>
 
 
 

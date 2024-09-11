@@ -5,10 +5,7 @@ import ProfilePosts from "../components/ProfilePosts";
 
 const Profile = () => {
   return (
-    <div style={{ 
-      background: "linear-gradient(135deg, #A1C4FD, #C2E9FB, #E2F4FD, #D4E6F1, #B4D9E8, #A2C9D6, #9ABAD8, #9B9BEB, #8A9BEB, #7A9AC9, #6C9BB2, #5A9A9E)", // soothing shades of blues and greens
-      minHeight: "100vh" 
-  }}>
+    <div>
       <Navbar/>
       <div className="px-8 md:px-[200px] mt-8 flex md:flex-row flex-col-reverse md:items-start">
         <div className="flex flex-col md:w-[70%] w-full mt-8 md:mt-0">
