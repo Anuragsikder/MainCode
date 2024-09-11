@@ -1,3 +1,4 @@
+import {IF} from '../url'
 
 
 const HomePosts = () => {
@@ -5,7 +6,7 @@ const HomePosts = () => {
     <div className="w-full flex mt-8 space-x-2">
       {/* left */}
     <div className="w-[85%] h-[200px] flex justify-center items-center">
-    <img src="https://techcrunch.com/wp-content/uploads/2023/03/GettyImages-1346223165-1.jpg?resize=1536,863" alt="" className="h-full w-full object-cover"/>  
+    <img src={IF+post.photo} alt="" className="h-full w-full object-cover"/>    
     </div>
     {/* right */}
     <div className="flex flex-col w-[65%">

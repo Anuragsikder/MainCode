@@ -34,6 +34,10 @@ const Register = () => {
   }
 
   return (
+    <div style={{ 
+      background: "linear-gradient(135deg, #A1C4FD, #C2E9FB, #E2F4FD, #D4E6F1, #B4D9E8, #A2C9D6, #9ABAD8, #9B9BEB, #8A9BEB, #7A9AC9, #6C9BB2, #5A9A9E)", // soothing shades of blues and greens
+      minHeight: "100vh" 
+  }}>
     <>
       <div className="flex items-center justify-between px-6 md:px-[200px] py-4">
     <h1 className="text-lg md:text-xl font-extrabold"><Link to="/">Coding Tutorial</Link></h1>
@@ -57,7 +61,7 @@ const Register = () => {
     </>
     
    
-    
+  </div>  
   )
 }
 

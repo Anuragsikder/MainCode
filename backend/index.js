@@ -8,6 +8,8 @@ const authRoute=require('./routes/auth')
 const userRoute=require('./routes/users')
 const postRoute=require('./routes/posts')
 const commentRoute=require('./routes/comments')
+const multer=require('multer')
+const path=require('path')
 //database
 const connectDB=async()=>{
     try{
@@ -27,7 +29,24 @@ app.use(cookieParser())
 app.use("/api/auth", authRoute)
 app.use("/api/users", userRoute)
 app.use("/api/posts", postRoute)
+app.use('/images',express.static(path.join(__dirname,'/images')))
 app.use("/api/comments", commentRoute)
+
+//image upload
+const storage=multer.diskStorage({
+    destination:(req,file,fn)=>{
+        fn(null,"images")
+    },
+    filename:(req,file,fn)=>{
+        fn(null,req.body.img)
+    }
+})
+
+const upload=multer({storage:storage})
+app.post("/api/upload",upload.single("file"),(req,res)=>{
+    console.log(req.body)
+    res.status(200).json("Image has been uploaded successfully!")
+})
 
 app.listen(process.env.PORT,()=>{
     connectDB()
